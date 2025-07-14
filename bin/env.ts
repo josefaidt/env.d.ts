@@ -28,7 +28,8 @@ export function generateDeclaration(envVars: Record<string, string>): string {
   const nodeJSNamespace = factory.createModuleDeclaration(
     undefined,
     factory.createIdentifier("NodeJS"),
-    factory.createModuleBlock([processEnvInterface])
+    factory.createModuleBlock([processEnvInterface]),
+    ts.NodeFlags.Namespace
   )
 
   ts.addSyntheticLeadingComment(

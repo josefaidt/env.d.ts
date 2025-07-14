@@ -24,7 +24,7 @@ describe("generateDeclaration", () => {
  * Manual edits are okay, but will be overwritten when you run this command.
  * Be sure to _include_ this file in your tsconfig.json
  */
-module NodeJS {
+namespace NodeJS {
   interface ProcessEnv {
     DATABASE_URL: string;
     API_KEY: string;
