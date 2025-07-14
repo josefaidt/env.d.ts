@@ -1,0 +1,28 @@
+{
+  "name": "env.d.ts",
+  "type": "module",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/josefaidt/env.d.ts"
+  },
+  "bin": {
+    "env.d.ts": "./dist/env.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "esbuild bin/env.ts --bundle --minify --platform=node --target=node18 --format=esm --outfile=dist/env.js --external:typescript --banner:js=\"import { createRequire } from 'module'; const require = createRequire(import.meta.url);\"",
+    "test": "node --import tsx --test"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.47.5",
+    "typescript": "^5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.13",
+    "esbuild": "^0.25.6",
+    "tsx": "^4.20.3"
+  },
+  "packageManager": "pnpm@10.13.1"
+}
