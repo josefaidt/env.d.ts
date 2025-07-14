@@ -1,7 +1,7 @@
 {
   "name": "env.d.ts",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "url": "https://github.com/josefaidt/env.d.ts"
   },
