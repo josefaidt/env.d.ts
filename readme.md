@@ -2,6 +2,8 @@
 
 Getting tired of looking up how to strongly type environment variables you know will exist just so you can get rid of `string | undefined`? Tired of visiting https://www.totaltypescript.com/how-to-strongly-type-process-env for the thousandth time?
 
+Run this handy little tool to quickly generate a declaration file for your env vars!
+
 ```bash
 npx env.d.ts
 ```
@@ -40,3 +42,7 @@ npx env.d.ts --out-dir src
 # or
 npx env.d.ts -o src
 ```
+
+## Disclaimer
+
+This tool doesn't do much and isn't intended to become a replacement for other dotenv tools. It is simply a means to an end when working in a new project. You may want to omit certain environment variables you have in your dotenv files that you know you won't be explicitly using in code, like `AWS_PROFILE`, or you may want to decorate keys with descriptions of when/how to use them. Use this tool to generate it the first time and clean it up or maintain how you see fit.
